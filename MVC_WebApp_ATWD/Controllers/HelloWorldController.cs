@@ -14,9 +14,9 @@ namespace MVC_WebApp_ATWD.Controllers
 
         //
         // GET: /HelloWorld/Welcome/
-        public string Welcome()
+        public string Welcome(string name="user", int id = 1)
         {
-            return "This is the Welcome action method.";
+            return HtmlEncoder.Default.Encode($"Hello {name}, Your ID is: {id}");
         }
         
     }
