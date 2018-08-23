@@ -10,7 +10,7 @@ namespace MVC_WebApp_ATWD.Models
         public string Title { get; set; }
 
         [Display(Name = "Released Date")]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         public DateTime ReleaseDate { get; set; }
 
         public string Genre { get; set; }
