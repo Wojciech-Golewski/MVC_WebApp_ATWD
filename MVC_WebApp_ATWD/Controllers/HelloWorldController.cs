@@ -7,16 +7,19 @@ namespace MVC_WebApp_ATWD.Controllers
     {
         //
         // GET: /HelloWorld/
-        public string Index()
+        public IActionResult Index()
         {
-            return "This is a default action.";
+            return View();
         }
 
         //
         // GET: /HelloWorld/Welcome/
-        public string Welcome(string name="user", int id = 1)
+        public IActionResult Welcome(string name, int numTimes = 1)
         {
-            return HtmlEncoder.Default.Encode($"Hello {name}, Your ID is: {id}");
+            ViewData["Message"] = "Hello " + name;
+            ViewData["numTimes"] = numTimes;
+
+            return View();
         }
         
     }
