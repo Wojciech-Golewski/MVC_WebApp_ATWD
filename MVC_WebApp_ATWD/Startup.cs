@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using MVC_WebApp_ATWD.Models;
 
 namespace MVC_WebApp_ATWD
 {
@@ -33,6 +35,9 @@ namespace MVC_WebApp_ATWD
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContext<MVC_WebApp_ATWDContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("MVC_WebApp_ATWDContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
