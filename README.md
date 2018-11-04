@@ -1,6 +1,5 @@
-# MVC_WebApp_ATWD
-ASP.NET Core MVC web application with Razor Pages, build in SQL, CRUD, search function and a validation.
+#Web Application (MVC)
 
-MVS Project - done
+Web application project for training purposes only.
 
-Deploy version - in progress
+Written according to https://docs.microsoft.com documentation
